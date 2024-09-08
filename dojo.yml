@@ -2,4 +2,4 @@ id: "linux-lunacy"
 name: Linux Lunacy
 type: public
 modules:
-- id: "handles"
+- id: "fds"
