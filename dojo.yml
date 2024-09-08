@@ -3,3 +3,4 @@ name: Linux Lunacy
 type: public
 modules:
 - id: "fds"
+- id: "other"

@@ -1,0 +1,6 @@
+name: Other Weirdness
+
+challenges:
+- id: "sf"
+  name: "Zipbombs are so Yesterday"
+  description: "You've heard of zipbombs, but have you ever heard of a catbomb? Make one, and get the flag!"

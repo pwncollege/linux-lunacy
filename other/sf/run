@@ -1,0 +1,15 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+PATH=/usr/bin
+
+WORKDIR=$(mktemp -d)
+[ -n "$WORKDIR" ] || exit 2
+cd $WORKDIR
+
+cp -a "$1" catbomb
+[ -f catbomb ] || exit 3
+cat catbomb > detonated
+
+read SIZE_PRE < <(du -sm catbomb | cut -f1)
+read SIZE_POST < <(du -sm detonated | cut -f1)
+[ "$SIZE_PRE" -lt "$SIZE_POST" ] && cat /flag
