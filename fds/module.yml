@@ -1,0 +1,9 @@
+name: File Descriptors
+
+challenges:
+- id: "of"
+  name: "Only Files"
+  description: "It takes a special kind of crazy to forget the file you came from!"
+- id: "wd"
+  name: "Wild Directories"
+  description: "Turns out that dealing with directories is as dangerous as a trapeze act!"

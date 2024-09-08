@@ -1,0 +1,25 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+PATH=/usr/bin
+
+read DEST < <(head -n 1 | tr -cd "[a-z0-9/]")
+[[ "$DEST" == /* ]] || exit 1
+
+mkdir -p "$DEST" || exit 2
+
+OLDIFS="$IFS"
+IFS="/"
+FILE=""
+for FRAGMENT in $DEST
+do
+	[ -z "$FRAGMENT" ] && continue
+	FILE="$FILE/$FRAGMENT"
+	[ -L "$FILE" ] && exit 3
+	chown root:root "$FILE"
+	chmod 000 "$FILE"
+done
+IFS="$OLDIFS"
+
+rm -f out
+read SRC < <(head -n 1 | tr -cd "[a-z0-9/]")
+cat $SRC > $DEST/out
