@@ -2,3 +2,4 @@
 
 cd /challenge
 gcc -static -o chal chal.c
+chmod 4755 /challenge/chal
