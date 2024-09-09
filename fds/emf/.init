@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /challenge
+gcc -static -o chal chal.c
