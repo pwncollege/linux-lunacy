@@ -1,0 +1,6 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+PATH=/usr/bin
+
+read PLATFORM < <(head -n 1 | tr -cd "[a-zA-Z0-9.]")
+sed -i -e "s/pwn.college/$PLATFORM/g" "$1"
