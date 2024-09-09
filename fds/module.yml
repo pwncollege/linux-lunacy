@@ -10,3 +10,6 @@ challenges:
 - id: "emf"
   name: "Full Circus"
   description: "On the one hand, a sold out night is great for the circus! On the other hand, it's easy to lose track of your flag."
+- id: "cwd"
+  name: "Wonky Stage"
+  description: "In Linux, like in the circus, the stage can be rocky!"

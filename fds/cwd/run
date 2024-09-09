@@ -1,0 +1,11 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+PATH=/usr/bin
+
+mkdir -p /tmp/circus/stage
+cd /tmp/circus/stage
+[ "$(realpath .)" == "/tmp/circus/stage" ] || exit 1
+
+echo -n "Where should I backflip? "
+read NAME < <(head -n 1 | tr -cd "[a-z]")
+cat "../../$NAME"
