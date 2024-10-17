@@ -1,0 +1,14 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+# No shenanigans like pipes, sockets, etc. Only terminal
+[ -t 0 ] || exit 1
+
+T=$(ps -p $$ -o tty=)
+I=$(readlink /proc/$$/fd/0 | sed 's#/dev/##')
+
+# This door opens elsewhere..
+[ "$T" = "$I" ] && exit 2
+
+read -p "I know where the door is but I forgot the key :( " key
+
+[ "$key" = "PWN" ] && cat /flag
