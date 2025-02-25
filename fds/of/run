@@ -6,5 +6,5 @@ rm -f /challenge/vault
 echo "The secret is: " > /challenge/vault
 read SRC < <(head -n 1 | tr -cd "[a-z0-9/]")
 
-chmod 000 /challenge/vault
+chmod 222 /challenge/vault
 cat $SRC >> /challenge/vault
