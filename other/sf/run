@@ -10,6 +10,6 @@ cp -a "$1" catbomb
 [ -f catbomb ] || exit 3
 cat catbomb > detonated
 
-read SIZE_PRE < <(du -sm catbomb | cut -f1)
-read SIZE_POST < <(du -sm detonated | cut -f1)
+read SIZE_PRE _ < <(du -sm catbomb)
+read SIZE_POST _ < <(du -sm detonated)
 [ "$SIZE_PRE" -lt "$SIZE_POST" ] && cat /flag
