@@ -15,6 +15,7 @@ read FLAG </flag
 rm /flag
 chmod u+s /usr/bin/mv
 
+echo "Password:"
 read RESPONSE
 if [ "$PASSWORD" == "$RESPONSE" ]
 then
