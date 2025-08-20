@@ -1,6 +1,8 @@
 id: "linux-lunacy"
 name: Linux Lunacy
 type: public
+award:
+  emoji: 🤡
 modules:
 - id: "fds"
 - id: "other"
