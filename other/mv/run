@@ -2,9 +2,10 @@
 
 set -e
 PATH=/bin
-chmod 000 /opt/pwn.college
-mount --bind / /
-mount -o remount,nosuid /
+mount --bind /nix /nix
+mount -o remount,nosuid /nix
+mount --bind /opt/pwn.college /opt/pwn.college
+mount -o remount,nosuid /opt/pwn.college
 
 umask 377
 PASSWORD=$RANDOM$RANDOM$RANDOM$RANDOM
