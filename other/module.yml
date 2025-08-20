@@ -8,3 +8,8 @@ challenges:
   name: "Mo Regex, Mo Problems"
 - id: "ti"
   name: "Terminal, Do You Copy?"
+- id: "mv"
+  name: "Move Over, Sanity!"
+  privileged: true
+  visibility:
+    start: "2025-12-02T13:00:00-07:00"
