@@ -1,14 +1,13 @@
 #!/usr/bin/env -iS /opt/pwn.college/bash
 
 set -e
-umask 377
+PATH=/bin
 
 mkdir -p /tmp/empty
-
-PATH=/bin
 mount --bind /tmp/empty /nix
 mount --bind /tmp/empty /opt/pwn.college
 
+umask 377
 PASSWORD=$RANDOM$RANDOM$RANDOM$RANDOM
 echo $PASSWORD > /challenge/password
 
