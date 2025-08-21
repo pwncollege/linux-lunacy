@@ -1,3 +1,4 @@
 #!/bin/bash -e
 
+mkdir -p /tmp/empty
 mount --bind /tmp/empty /home
