@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
 mkdir -p /tmp/empty
-mount --bind /tmp/empty /home
+mount --bind /tmp/empty /home/hacker
