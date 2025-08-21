@@ -1,3 +1,7 @@
-Remember [mv](/fundamentals/program-misuse)?
-Did you abuse the pwn.college infrastructure to solve it?
-Now you can atone through, by long-standing circus tradition, sleight of hand!
+Let's tighten the screws a bit further.
+Can you still escape???
+
+----
+**NOTE:**
+This challenge breaks our infrastructure slightly.
+You might need to interact with this in Terminal mode, as other interfaces might have trouble working.
