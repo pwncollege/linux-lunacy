@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+mount --bind /tmp/empty /home
