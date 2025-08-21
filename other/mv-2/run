@@ -1,5 +1,7 @@
 #!/usr/bin/env -iS /opt/pwn.college/bash
 
+# let's see if White can cheese this one ;-)
+
 set -e
 PATH=/bin
 

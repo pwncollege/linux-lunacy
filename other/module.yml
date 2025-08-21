@@ -14,5 +14,3 @@ challenges:
 - id: "mv-2"
   name: "Moving on from Move..."
   privileged: true
-  visibility:
-    start: "2025-12-02T13:00:00-07:00"
