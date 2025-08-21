@@ -11,6 +11,6 @@ challenges:
 - id: "mv"
   name: "Move Over, Sanity!"
   privileged: true
-- id: "mv-2"
+- id: "mv-b"
   name: "Moving on from Move..."
   privileged: true
