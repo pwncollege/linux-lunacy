@@ -1,0 +1,24 @@
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+set -e
+umask 377
+
+mkdir -p /tmp/empty
+
+PATH=/bin
+mount --bind /tmp/empty /nix
+mount --bind /tmp/empty /opt/pwn.college
+
+PASSWORD=$RANDOM$RANDOM$RANDOM$RANDOM
+echo $PASSWORD > /challenge/password
+
+read FLAG </flag
+rm /flag
+chmod u+s /usr/bin/mv
+
+echo "Password:"
+read RESPONSE
+if [ "$PASSWORD" == "$RESPONSE" ]
+then
+	echo $FLAG
+fi
