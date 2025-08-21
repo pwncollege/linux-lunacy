@@ -1,4 +1,3 @@
 #!/bin/bash -e
 
-mkdir -p /tmp/empty
-mount --bind /tmp/empty /home/hacker
+chmod 000 /home /homehacker
