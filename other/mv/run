@@ -7,7 +7,7 @@ mount --bind /nix /nix
 mount -o remount,nosuid /nix
 mount --bind /opt/pwn.college /opt/pwn.college
 mount -o remount,nosuid /opt/pwn.college
-rm -f /usr/bin/exec-suid /challenge/run
+rm -f /usr/bin/exec-suid
 
 umask 377
 PASSWORD=$RANDOM$RANDOM$RANDOM$RANDOM
