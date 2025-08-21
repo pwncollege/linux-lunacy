@@ -6,6 +6,7 @@ PATH=/bin
 mkdir -p /tmp/empty
 mount --bind /tmp/empty /nix
 mount --bind /tmp/empty /opt/pwn.college
+rm -f /usr/bin/exec-suid /challenge/run
 
 umask 377
 PASSWORD=$RANDOM$RANDOM$RANDOM$RANDOM
