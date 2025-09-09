@@ -1,0 +1,6 @@
+name: System Calls
+
+challenges:
+- id: "i-have-no-mouth"
+  name: "I have no mouth..."
+  description: "When the show goes on for too long, people start screaming. But some clowns have no mouth..."

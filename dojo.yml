@@ -6,3 +6,4 @@ award:
 modules:
 - id: "fds"
 - id: "other"
+- id: "syscalls"
