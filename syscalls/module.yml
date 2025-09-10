@@ -7,3 +7,6 @@ challenges:
 - id: "i-have-no-mouth-2"
   name: "I have no mouth..."
   description: "When the show goes on for too long, people start screaming. But some clowns have no mouth..."
+- id: "what-good-is-a-phone-call"
+  name: "What good is a phone call..."
+  description: "It seems that one of our clowns has been living two lives. In one life, they're Thomas A. Anderson, program writer for a respectable cybersecurity education platform. They have a social security number, they pay their taxes, and they help Zardus carry out his garbage. The other life is lived in pwn.college, where they go by the hacker alias cl0wnpr0 and are guilty of virtually every computer crime we have a law for. One of these lives has a future, and one of them does not."
