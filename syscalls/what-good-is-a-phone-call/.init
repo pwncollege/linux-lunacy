@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gcc -o /challenge/when-you-are-unable-to-speak.c /challenge/when-you-are-unable-to-speak.c -lseccomp -lcapstone
-chmod 6755 /challenge/when-you-are-unable-to-speak.c
+gcc -o /challenge/when-you-are-unable-to-speak /challenge/when-you-are-unable-to-speak.c -lseccomp -lcapstone
+chmod 6755 /challenge/when-you-are-unable-to-speak
