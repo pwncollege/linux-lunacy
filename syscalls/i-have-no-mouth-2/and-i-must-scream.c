@@ -70,11 +70,6 @@ void print_disassembly(void *shellcode_addr, size_t shellcode_size)
     cs_close(&handle);
 }
 
-void signal_handler(int signum)
-{
-    while (1);
-}
-
 int main(int argc, char **argv, char **envp)
 {
     assert(argc > 0);
@@ -99,6 +94,7 @@ int main(int argc, char **argv, char **envp)
     else
         printf("Successfully opened the file located at `%s`.\n", argv[1]);
 
+
     void *shellcode = mmap((void *)0x1337000, 0x1000, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANON, 0, 0);
     assert(shellcode == (void *)0x1337000);
     printf("Mapped 0x1000 bytes for shellcode at %p!\n", shellcode);
@@ -110,10 +106,23 @@ int main(int argc, char **argv, char **envp)
     print_disassembly(shellcode, shellcode_size);
     puts("");
 
+
+    stack_t ss;
+    ss.ss_sp = malloc(SIGSTKSZ);
+    assert(ss.ss_sp);
+    ss.ss_size = SIGSTKSZ;
+    ss.ss_flags = 0;
+    assert(sigaltstack(&ss, NULL) == 0);
+
+    char *handler = mmap((void *)0x1000000, 0x1000, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANON, 0, 0);
+    handler[0] = '\xeb';
+    handler[1] = '\xfe';
+
+    assert(mprotect(handler, 0x1000, PROT_READ|PROT_EXEC) == 0);
     struct sigaction sa;
-    sa.sa_handler = signal_handler;
+    sa.sa_flags = SA_ONSTACK;
+    sa.sa_handler = (void *)handler;
     sigemptyset(&sa.sa_mask);
-    sa.sa_flags = 0;
 
     for (int sig = 1; sig < 0x1000; sig++) {
         if (sig != SIGKILL && sig != SIGSTOP) {
