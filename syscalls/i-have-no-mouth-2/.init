@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gcc -o /challenge/and-i-must-scream /challenge/and-i-must-scream.c -lseccomp -lcapstone
+chmod 6755 /challenge/and-i-must-scream
