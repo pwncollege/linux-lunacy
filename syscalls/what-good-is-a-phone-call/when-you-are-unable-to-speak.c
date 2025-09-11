@@ -72,20 +72,8 @@ void print_disassembly(void *shellcode_addr, size_t shellcode_size)
 
 int main(int argc, char **argv, char **envp)
 {
-    assert(argc > 0);
-
-    printf("###\n");
-    printf("### Welcome to %s!\n", argv[0]);
-    printf("###\n");
-    printf("\n");
-
     setvbuf(stdin, NULL, _IONBF, 0);
     setvbuf(stdout, NULL, _IONBF, 1);
-
-    puts("You may open a specified file, as given by the first argument to the program (argv[1]).\n");
-    puts("You may upload custom shellcode to do whatever you want.\n");
-    puts("For extra security, this challenge will only allow certain system calls!\n");
-
     assert(argc > 1);
 
     int fd = open(argv[1], O_RDONLY|O_NOFOLLOW);
