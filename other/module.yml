@@ -14,3 +14,9 @@ challenges:
 - id: "mv-two"
   name: "Moving on from Move..."
   privileged: true
+- id: "stack"
+  name: "If at first you don't succeed..."
+  description: |
+    The great clown, Einstein, apocryphally defined insanity.
+    Unfortunately, our circus isn't well-read!
+    Can you get this flag?

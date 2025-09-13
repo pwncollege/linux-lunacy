@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gcc -o /challenge/sane /challenge/sane.c -lseccomp -lcapstone
+chmod 6755 /challenge/sane
